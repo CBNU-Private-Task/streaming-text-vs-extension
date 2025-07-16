@@ -1,15 +1,27 @@
 {
   "name": "streaming-extension",
-  "displayName": "Streaming Extension",
-  "description": "A VS Code extension that streams AI responses from Ollama LLM API and displays generated JavaScript code in real-time",
-  "version": "0.0.1",
+  "displayName": "AI Code Streaming Extension",
+  "description": "Real-time AI code generation with Ollama integration",
+  "version": "0.0.2",
   "publisher": "rotanakkosal",
-  "engines": {
-    "vscode": "^1.102.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CBNU-Private-Task/streaming-text-vs-extension.git"
   },
-  "categories": [
-    "Other"
-  ],
+  "homepage": "https://github.com/rotanakkosal",
+  "bugs": {
+    "url": "https://github.com/yourusername/your-repo/issues"
+  },
+  "license": "MIT",
+  "keywords": ["ai", "code-generation", "ollama", "javascript", "streaming"],
+  "categories": ["Other", "Machine Learning"],
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": ">=1.102.0"
+  },
   "activationEvents": [
     "onCommand:streaming-extension.helloWorld"
   ],
