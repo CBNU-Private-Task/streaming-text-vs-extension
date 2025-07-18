@@ -2,28 +2,31 @@
   "name": "streaming-extension",
   "displayName": "AI Code Streaming Extension",
   "description": "Real-time AI code generation with Ollama integration",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "publisher": "rotanakkosal",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/CBNU-Private-Task/streaming-text-vs-extension.git"
   },
   "homepage": "https://github.com/rotanakkosal",
   "bugs": {
-    "url": "https://github.com/yourusername/your-repo/issues"
+    "url": "https://github.com/CBNU-Private-Task/vscode-extension/issues"
   },
+  "extensionDependencies": [],
+  "extensionPack": [],
   "license": "MIT",
-  "keywords": ["ai", "code-generation", "ollama", "javascript", "streaming"],
+  "keywords": ["ai", "code-generation", "ollama", "javascript", "streaming", "fastapi"],
   "categories": ["Other", "Machine Learning"],
-  "galleryBanner": {
-    "color": "#C80000",
-    "theme": "dark"
-  },
   "engines": {
     "vscode": ">=1.102.0"
   },
+  "fastApiServer": {
+    "repository": "https://github.com/CBNU-Private-Task/fast-api.git",
+    "description": "Companion FastAPI server required for this extension"
+  },
   "activationEvents": [
-    "onCommand:streaming-extension.helloWorld"
+    "onStartupFinished"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -31,6 +34,18 @@
       {
         "command": "streaming-extension.helloWorld",
         "title": "Streaming Extension"
+      },
+      {
+        "command": "streaming-extension.login",
+        "title": "Login"
+      },
+      {
+        "command": "streaming-extension.logout",
+        "title": "Logout"
+      },
+      {
+        "command": "streaming-extension.getArticles",
+        "title": "getArticles"
       }
     ]
   },
